@@ -26,10 +26,10 @@ function displayCustomers() {
   for (let counter = 1; counter <= 40; counter++) {
     document.querySelector(`.bar:nth-of-type(${counter})`).style.marginTop = customerQueueList[counter - 1] * 3 + "vh";
   }
-  changecustomerQueueList();
+  changeCustomerQueueList();
 }
 
-function changecustomerQueueList() {
+function changeCustomerQueueList() {
   const queueSize = getCustomersNumber();
   customerQueueList.shift();
   customerQueueList.push(queueSize);
